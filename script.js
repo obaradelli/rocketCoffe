@@ -58,4 +58,62 @@ window.addEventListener("DOMContentLoaded", () => {
   buildLayout();
 
   ////////////////////////////////////////////////////////////////
+
+  const trigger = document.getElementById("trigger");
+  trigger.addEventListener("click", handleSidebar);
+
+  const trigger2 = document.getElementById("trigger2");
+  trigger2.addEventListener("click", handleSidebar);
+
+  const sidebar = document.querySelector(".sidebar");
+
+  function adad() {
+    const trigger1 = document.querySelector(".trigger");
+    const closeTrigger = trigger1.classList.contains("trigger-open");
+
+    if (closeTrigger) {
+      trigger1.classList.remove("trigger-open");
+      trigger1.classList.add("trigger-none");
+    } else {
+      trigger1.classList.add("trigger-open");
+      trigger1.classList.remove("trigger-none");
+    }
+  }
+
+  function adad2() {
+    const trigger2 = document.querySelector(".trigger2");
+    const closeTrigger = trigger2.classList.contains("trigger-none");
+
+    if (closeTrigger) {
+      trigger2.classList.add("trigger-open");
+      trigger2.classList.remove("trigger-none");
+    } else {
+      trigger2.classList.remove("trigger-open");
+      trigger2.classList.add("trigger-none");
+    }
+  }
+
+  function close() {
+    sidebar.classList.remove("nav-open");
+    adad();
+    adad2();
+  }
+
+  function open() {
+    sidebar.classList.add("nav-open");
+
+    adad();
+    adad2();
+  }
+
+  function handleSidebar() {
+    console.log("abc");
+    const sidebarIsClose = sidebar.classList.contains("nav-open");
+
+    if (sidebarIsClose) {
+      close();
+    } else {
+      open();
+    }
+  }
 });
