@@ -1,6 +1,6 @@
-/* ---------------------- */
+/* --------------------- */
 /*---- GENERAL CONFIG ----*/
-/* ---------------------- */
+/* --------------------- */
 
 * {
   padding: 0;
@@ -9,12 +9,12 @@
 }
 
 body {
-  /* height: 100vh; */
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   font-family: "Poppins", sans-serif;
   line-height: 1;
@@ -37,9 +37,9 @@ body {
   --text-color-menu-mobile: #e1e1e6;
 }
 
-/* ------------------ */
+/* ----------------- */
 /*---- BACKGROUND ----*/
-/* ------------------ */
+/* ----------------- */
 
 .blur {
   background: #996dff;
@@ -61,29 +61,49 @@ body {
   bottom: -63px;
 }
 
-/* ------------------ */
-/*------ HEADER ------*/
-/* ------------------ */
+/* --------------- */
+/*---- REUSABLE ----*/
+/* --------------- */
+
+.display {
+  display: flex;
+}
+
+.--visible {
+  display: block;
+}
+
+.--none {
+  display: none;
+}
+
+.--margin-top {
+  margin-top: 5.5rem;
+}
+
+/* ------------- */
+/*---- HEADER ----*/
+/* ------------- */
 
 .header {
-  width: 80%;
+  width: 60%;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  z-index: 99999;
 
   margin: 0 auto;
-  padding-top: 3.125rem;
+  margin-top: 3.125rem;
+  /* padding-top: 3.125rem; */
 }
 
 .header--container {
   width: 100%;
 
   display: flex;
-  flex-direction: row;
   align-items: center;
-
-  margin: 0 auto;
   justify-content: space-between;
 }
 
@@ -95,7 +115,9 @@ body {
   align-items: center;
   justify-content: center;
 
-  margin-left: 125px;
+  margin-left: 7.8125rem;
+
+  transition: all 0.3s;
 }
 
 .header--nav-ul {
@@ -142,6 +164,10 @@ body {
 .header--cta button {
   all: unset;
 
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
   padding: 0.6875rem 2.375rem;
 
   border: 1px solid var(--button);
@@ -171,16 +197,81 @@ body {
 /*------ SECTION ------*/
 /* ------------------ */
 
-.section--principal {
+main {
+  height: 100%;
+  /* display: flex; */
+}
+
+/*------ SECTION--MOBILE ------*/
+
+.section--mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
 
-  margin: 2.5rem 0 auto;
+.section--mobile p {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 41px;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-style: normal;
+
+  color: #ffffff;
+}
+
+.section--mobile-button button {
+  all: unset;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+  padding: 0.6875rem 2.375rem;
+
+  border: 1px solid var(--button);
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 15px;
+
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  color: var(--text-color);
+
+  transition: all 0.3s;
+}
+
+.section--mobile-button button:hover {
+  background-color: var(--button);
+}
+
+/*------ SECTION--DESKTOP ------*/
+
+.section--principal {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  /* margin: 2.5rem 0 auto; */
 }
 
 .section--principal-title {
+  /* height: 100%; */
+
   display: flex;
   flex-direction: column;
 
@@ -213,4 +304,13 @@ body {
 
   text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
     -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+/* .section--principal-img {
+  height: 100%;
+} */
+
+.section--principal-img img {
+  /* width: 100%; */
+  height: 99%;
 }

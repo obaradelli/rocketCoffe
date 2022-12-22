@@ -9,7 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="queries.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
@@ -19,14 +21,19 @@
     <title>Rocket Coffe</title>
   </head>
   <body>
-    <!-- Background effect's -->
-    <div class="blur --top"></div>
-    <div class="blur --bottom"></div>
-
     <header class="header">
       <div class="header--container">
         <div class="header--image">
-          <img src="logo.svg" alt="logo RocketCoffe" />
+          <img
+            src="logoMobile.svg"
+            alt="logo RocketCoffe"
+            class="set-visible --none"
+          />
+          <img
+            src="logo.svg"
+            alt="logo RocketCoffe"
+            class="set-none --visible"
+          />
         </div>
 
         <nav class="header--nav">
@@ -39,22 +46,44 @@
           </ul>
         </nav>
 
-        <div class="header--cta">
+        <div class="set-visible --none">
+          <img src="openMenu.svg" class="set-visible --none" />
+          <!-- <img src="closeMenu.svg" class="set-visible --none" /> -->
+        </div>
+
+        <div class="header--cta set-none --visible">
           <button>Pegar meu café</button>
         </div>
       </div>
     </header>
 
-    <main>
+    <main class="main">
+      <section class="section--mobile set-visible --none">
+        <div class="set-visible --none --margin-top">
+          <p>
+            O café que fará seu <br />
+            código decolar para <br />
+            o próximo nível.
+          </p>
+        </div>
+        <div class="section--mobile-button set-visible --none --margin-top">
+          <button>Pegar meu café <img src="vector.svg" class="" /></button>
+        </div>
+      </section>
+
       <section class="section--principal">
         <div class="section--principal-title">
           <h1>Great Coffe</h1>
           <h2>< Great Code/ ></h2>
         </div>
         <div class="section--principal-img">
-          <img href="imgCoffee.png" href="Imagem de um café" />
+          <img src="imgCoffee.svg" />
         </div>
       </section>
     </main>
+
+    <!-- Background effect's -->
+    <div class="blur set-none --top"></div>
+    <div class="blur --bottom"></div>
   </body>
 </html>
