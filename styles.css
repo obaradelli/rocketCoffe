@@ -92,9 +92,8 @@ body {
   align-items: center;
   justify-content: center;
 
-
   margin: 0 auto;
-  margin-top: 3.125rem;
+  margin-top: 3.2rem;
   /* padding-top: 3.125rem; */
 }
 
@@ -140,8 +139,8 @@ body {
 
   font-family: "Manrope";
   font-weight: 500;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
 
   font-style: normal;
   letter-spacing: 0.02em;
@@ -176,8 +175,8 @@ body {
 
   font-family: "Manrope";
   font-weight: 800;
-  font-size: 11px;
-  line-height: 15px;
+  font-size: 0.6875rem;
+  line-height: 0.9375rem;
 
   font-style: normal;
   letter-spacing: 0.02em;
@@ -196,11 +195,6 @@ body {
 /*------ SECTION ------*/
 /* ------------------ */
 
-main {
-  /* height: 100%; */
-  /* display: flex; */
-}
-
 /*------ SECTION--MOBILE ------*/
 
 .section--mobile {
@@ -213,8 +207,8 @@ main {
 .section--mobile p {
   font-family: "Manrope";
   font-weight: 600;
-  font-size: 30px;
-  line-height: 41px;
+  font-size: 1.9rem;
+  line-height: 2.6rem;
 
   text-align: center;
   letter-spacing: 0.02em;
@@ -233,14 +227,14 @@ main {
   padding: 0.6875rem 2.375rem;
 
   border: 1px solid var(--button);
-  border-radius: 5px;
+  border-radius: 0.92remx;
 
   cursor: pointer;
 
   font-family: "Manrope";
   font-weight: 800;
-  font-size: 11px;
-  line-height: 15px;
+  font-size: 0.7rem;
+  line-height: 0.9375rem;
 
   font-style: normal;
   letter-spacing: 0.02em;
@@ -265,7 +259,7 @@ main {
   align-items: center;
   /* justify-content: center; */
 
-  margin-top: 15px;
+  margin-top: 9.5rem;
 
   /* margin: 2.5rem 0 auto; */
 }
@@ -283,8 +277,8 @@ main {
 .section--principal-title h1 {
   font-family: "Manrope";
   font-weight: 700;
-  font-size: 80px;
-  line-height: 109px;
+  font-size: 5rem;
+  line-height: 6.9rem;
 
   font-style: normal;
   letter-spacing: -0.03em;
@@ -295,8 +289,8 @@ main {
 .section--principal-title h2 {
   font-family: "Manrope";
   font-weight: 700;
-  font-size: 80px;
-  line-height: 109px;
+  font-size: 5rem;
+  line-height: 6.9rem;
 
   letter-spacing: -0.03em;
   font-style: normal;
@@ -312,7 +306,5 @@ main {
 } */
 
 .section--principal-img img {
-  /* width: 100%; */
-  
-  height: 25.2rem;
+  height: 27.2rem;
 }
